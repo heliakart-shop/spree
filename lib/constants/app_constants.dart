@@ -1,6 +1,6 @@
 class AppConstants {
   // App Information
-  static const String appName = 'Spree Party';
+  static const String appName = 'Spree Game';
   static const String appTagline = 'AI-Powered Party Games';
   static const String appDescription = 'AI Party Games Generator';
   

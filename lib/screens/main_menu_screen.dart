@@ -6,6 +6,7 @@ import '../models/game_data.dart';
 import '../utils/app_utils.dart';
 import 'game_settings_screen.dart';
 import 'game_history_screen.dart';
+import 'privacy_policy_screen.dart';
 
 class MainMenuScreen extends StatefulWidget {
   const MainMenuScreen({super.key});
@@ -136,6 +137,14 @@ class _MainMenuScreenState extends State<MainMenuScreen>
     );
   }
 
+  void _navigateToPrivacyPolicy() {
+    AppUtils.lightHaptic();
+    AppUtils.navigateToPage(
+      context,
+      const PrivacyPolicyScreen(),
+    );
+  }
+
   @override
   void dispose() {
     _fadeController.dispose();
@@ -224,7 +233,7 @@ class _MainMenuScreenState extends State<MainMenuScreen>
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const GradientText(
-                text: 'Spree Party',
+                text: 'Spree Game',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -242,6 +251,23 @@ class _MainMenuScreenState extends State<MainMenuScreen>
           ),
         ),
         
+        // Privacy Policy button
+        GestureDetector(
+          onTap: _navigateToPrivacyPolicy,
+          child: GlassContainer(
+            color: AppColors.golden,
+            width: 50,
+            height: 50,
+            borderRadius: 15,
+            child: const Icon(
+              Icons.shield,
+              color: AppColors.golden,
+              size: 24,
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+
         // History button with notification badge
         Stack(
           children: [

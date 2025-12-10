@@ -1,6 +1,6 @@
 class AppConfig {
-  static const String verificationKey = "2025-10-20T161723.000";
-  static const String defaultEndpoint = "https://spreeparty.site";
+  static const String verificationKey = "2025-12-02T230223.857";
+  static const String defaultEndpoint = "https://spreepartyapp.site";
   static const String savedLinkKey = "SavedLink";
   static const String isPermittedKey = "IsPermitted";
   static const String isRequestedKey = "IsRequested";

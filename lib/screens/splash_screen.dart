@@ -123,7 +123,7 @@ class _SplashScreenState extends State<SplashScreen>
                       const SizedBox(height: 32),
                       // App name
                       const GradientText(
-                        text: 'Spree Party',
+                        text: 'Spree Game',
                         style: TextStyle(
                           fontSize: 36,
                           fontWeight: FontWeight.bold,

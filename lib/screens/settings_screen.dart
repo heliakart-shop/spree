@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_theme.dart';
 import '../widgets/common_widgets.dart';
+import 'privacy_policy_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -850,7 +851,12 @@ class _SettingsScreenState extends State<SettingsScreen>
           subtitle: 'Read our privacy policy and data handling',
           onTap: () {
             _triggerHaptic();
-            _showComingSoon('Privacy Policy');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PrivacyPolicyScreen(),
+              ),
+            );
           },
           icon: Icons.privacy_tip,
         ),
@@ -876,7 +882,7 @@ class _SettingsScreenState extends State<SettingsScreen>
         ),
         const SizedBox(height: 16),
         _buildSettingTile(
-          title: 'Rate Spree Party',
+          title: 'Rate Spree Game',
           subtitle: 'Love the app? Rate us on the App Store',
           onTap: () {
             _triggerHaptic();
@@ -1116,7 +1122,7 @@ class _SettingsScreenState extends State<SettingsScreen>
             _buildInfoRow('Release Date', 'September 2025'),
             const SizedBox(height: 16),
             Text(
-              'Spree Party - AI-Powered Party Games Generator',
+              'Spree Game - AI-Powered Party Games Generator',
               style: AppTextStyles.bodyLarge.copyWith(
                 color: AppColors.lightBeige.withOpacity(0.8),
                 fontStyle: FontStyle.italic,
@@ -1496,7 +1502,7 @@ class _SettingsScreenState extends State<SettingsScreen>
             ),
             const SizedBox(width: 12),
             Text(
-              'Rate Spree Party',
+              'Rate Spree Game',
               style: AppTextStyles.headlineMedium.copyWith(fontSize: 20),
             ),
           ],
@@ -1505,7 +1511,7 @@ class _SettingsScreenState extends State<SettingsScreen>
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Love using Spree Party? Your rating helps us reach more party enthusiasts!',
+              'Love using Spree Game? Your rating helps us reach more party enthusiasts!',
               style: AppTextStyles.bodyLarge.copyWith(
                 color: AppColors.lightBeige.withOpacity(0.8),
                 height: 1.4,
