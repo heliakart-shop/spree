@@ -52,10 +52,6 @@
 	</dict>
 	<key>NSNetworkVoluntaryUpload</key>
 	<string>This app uses AI services to generate party games and activities.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>background-processing</string>
-	</array>
 	<key>UISupportedInterfaceOrientations</key>
 <array>
     <string>UIInterfaceOrientationPortrait</string>
